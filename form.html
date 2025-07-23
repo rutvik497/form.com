@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>form</title>
+
+<script>
+function vf()
+{
+var a=document.form.fname.value;
+if(a==null || a=="")
+{
+alert("please enter your fist name");
+document.form.fname.focus();
+return false;
+}
+var a=document.form.lname.value;
+if(a==null || a=="")
+{
+alert("please enter your last name");
+document.form.lname.focus();
+return false;
+}
+var a=document.form.sname.value;
+if(a==null || a=="")
+{
+alert("please enter your sure name");
+document.form.sname.focus();
+return false;
+}
+var a=document.form.email.value;
+if(a==null || a=="")
+{
+alert("please enter your email id");
+document.form.email.focus();
+return false;
+}
+var b=document.form.mb.value;
+if(b==null || isNaN(b) || b.length!=10)
+{
+alert("please enter mobail number properly");
+document.form.mb.focus();
+return false;
+}
+var c=document.form.pcode.value;
+if(c==null || isNaN(c) || c.length!=6)
+{
+alert("please enter pincode properly");
+document.form.pcode.focus();
+return false;
+}
+var g=document.form.g.value;
+if(g==null || g=="")
+{
+alert("please enter your gender");
+document.form.g.focus();
+return false;
+}
+if((document.form.g[0].cheked==false)&&(document.form.g[1].cheked==false))
+{
+alert("please select any gender");
+document.form.g[0].focus();
+return false;
+}
+if((document.form.h[0].cheked==false)&&(document.form.h[1].cheked==false))
+{
+alert("please select any hobby");
+document.form.h[0].focus();
+document.form.h.focus();
+return false;
+}
+if(document.form.city.value=="-1")
+{
+alert("please select any city");
+document.form.city.focus();
+return false;
+}
+}
+</script>
+</head><body>
+<form onsubmit="return vf()" method="get" action="form" name="form">fist name &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; :<input name="fname"><br>
+last name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:<input name="lname"><br>
+sure name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; :<input name="sname"><br>
+email id &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :<input name="email"><br>
+mobail no &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; :<input name="mb"><br>
+pincode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:<input name="pcode"><br>
+gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;:<input name="g" value="male" type="radio">male
+&nbsp;&nbsp;<input name="g" value="female" type="radio">female<br>
+hobby &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:<input name="h" value="reading" type="checkbox">reading
+&nbsp;<input name="h" value="playing" type="checkbox">playing &nbsp;<input name="h" value="gaming" type="checkbox">gaming<br>
+city &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; :
+<select name="city"><option value="-1">selection list</option><option>surat</option><option>bhavanagar</option><option>vadodara</option></select>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input name="submit" value="submit" type="submit"></form>
+</body></html>
